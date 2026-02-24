@@ -1,0 +1,117 @@
+body{
+            background-color: #ffdef2;
+            /* Fundo de bolinhas igual ao da imagem que você gostou */
+            background-image: radial-gradient(#ffffff 20%, transparent 20%);
+            background-size: 30px 30px;
+            font-family: 'Fredoka', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #faf7e5;
+            padding: 40px;
+            border-radius: 40px;
+            border: 8px solid #ff4d94;
+            box-shadow: 10px 10px 0px rgba(255, 77, 148, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        /* Aqui está a mágica para a Hello Kitty aparecer! */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -140px; /* Ajustado para ela ficar sentadinha em cima */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 180px;
+            background: url('../img/12345-removebg-preview.png') no-repeat center;
+            background-size: contain;
+            z-index: 2;
+
+        }
+        
+
+        h1 {
+            color: #ff4d94;
+            font-size: 26px;
+            margin-top: 50px; /* Espaço para não cobrir a boneca */
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 85%;
+            padding: 12px;
+            border: 2px solid #ffb6d9;
+            border-radius: 50px;
+            outline: none;
+            color: #ff4d94;
+            text-align: center;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        button {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff75ac;
+            transform: scale(1.05);
+        }
+
+        #resultado {
+            margin-top: 20px;
+            text-align: left;
+            background: #fff5f9;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px dashed #ffb6d9;
+            color: #d6337a;
+        }
+        
+
+/* Garante que o container seja uma caixa centralizada */
+.container {
+    background-color: rgb(255, 247, 212);
+    padding: 40px;
+    border-radius: 40px;
+    border: 8px solid #ff4d94;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative; /* ESSENCIAL para as flores e a Hello Kitty ficarem presas aqui */
+    margin: 100px auto; /* Centraliza na tela e dá espaço no topo */
+    display: block; 
+}
+
+/* Configuração Geral das Flores */
+.flor {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+/* Posicionamento Individual (Ajuste os valores se precisar) */
+.margarida-1 { top: -30px; left: -30px; background-image: url('../img/margaridas.png'); }
+.lirio-1 { top: -20px; right: -30px; background-image: url('../img/lirios.png'); }
+.margarida-2 { bottom: -30px; right: -20px; background-image: url('../img/margaridas.png'); }
+.lirio-2 { bottom: -20px; left: -30px; background-image: url('../img/lirios.png'); }
